@@ -24,6 +24,10 @@ module.exports = {
     assetModuleFilename: 'img/[hash][ext]',
   },
   resolve: {
+    fallback: {
+      crypto: 'crypto-browserify',
+      stream: 'stream-browserify'
+    },
     modules: [__dirname, path.join(__dirname, '../src'), path.join(__dirname, '../node_modules')],
   },
   resolveLoader: {
